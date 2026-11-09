@@ -52,3 +52,10 @@ git pull --ff-only
 ## Межі проєкту
 
 Лобі демонстраційні. Серверної реєстрації й авторизації немає. Площа Ринок на карті є умовним орієнтиром.
+
+## Посилання
+
+- Репозиторій: https://github.com/Kabannvtilti/gaming-hub
+- GitHub Pages: https://kabannvtilti.github.io/gaming-hub/
+- Netlify: https://gaming-hub-lab6-kapushchak.netlify.app/
+
