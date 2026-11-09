@@ -76,4 +76,5 @@ node --test tests/validation.test.mjs
 - Репозиторій: https://github.com/Kabannvtilti/gaming-hub
 - GitHub Pages: https://kabannvtilti.github.io/gaming-hub/
 - Netlify: https://gaming-hub-lab6-kapushchak.netlify.app/
+- Vercel (ЛР9): https://gaming-hub-snowy.vercel.app/#feedback
 
