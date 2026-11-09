@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Gaming Hub — українська ігрова спільнота: форум, Wiki, пошук напарників LFG та корисні матеріали для командної гри."
+    />
+    <meta name="theme-color" content="#0B1018" />
+    <title>Gaming Hub — форум, Wiki та пошук напарників</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/tailwind.css?v=hero-background-20261103" />
+    <script src="js/navigation.js" defer></script>
+  </head>
+  <body id="top" class="min-w-0 bg-ink font-sans text-base leading-relaxed text-paper">
+    <a
+      class="absolute left-2 top-2 z-50 -translate-y-32 rounded-lg border border-primary bg-surface px-4 py-3 focus:translate-y-0 focus:outline focus:outline-2 focus:outline-primary"
+      href="#main-content"
+     title="Перейти до основного вмісту">
+      Перейти до основного вмісту
+    </a>
+    <header class="border-b border-border bg-surface">
+      <div
+        class="mx-auto flex max-w-site items-center justify-between gap-3 px-4 py-3 md:px-6 lg:px-8"
+      >
+        <a
+          class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary gap-3"
+          href="#top"
+          aria-label="Gaming Hub — на головну"
+         title="Gaming Hub — на головну">
+          <img
+            class="brand-logo h-12 w-20 object-contain"
+            src="assets/images/logo.svg"
+            alt=""
+            width="88"
+            height="48"
+          />
+          <span class="hidden text-lg font-bold xl:inline">Gaming Hub</span>
+        </a>
+        <nav class="hidden md:block" aria-label="Головна навігація">
+          <ul class="flex flex-wrap items-center gap-2">
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#features"
+               title="Можливості">
+                Можливості
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#lfg"
+               title="LFG">
+                LFG
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#media"
+               title="Відео">
+                Відео
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#contacts"
+               title="Контакти">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="hidden min-h-12 items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition-colors hover:bg-primaryHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:inline-flex"
+          href="#lfg"
+         title="Знайти команду">
+          Знайти команду
+        </a>
+        <details class="relative md:hidden" id="mobile-menu">
+          <summary
+            class="flex min-h-12 min-w-12 cursor-pointer items-center justify-center rounded-lg border border-border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+          >
+            Меню
+          </summary>
+          <nav
+            class="absolute right-0 z-30 mt-3 w-60 rounded-lg border border-border bg-surface p-3 shadow-card"
+            aria-label="Мобільна навігація"
+          >
+            <ul class="grid gap-1">
+              <li>
+                <a
+                  class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  href="#features"
+                 title="Можливості">
+                  Можливості
+                </a>
+              </li>
+              <li>
+                <a
+                  class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  href="#lfg"
+                 title="LFG">
+                  LFG
+                </a>
+              </li>
+              <li>
+                <a
+                  class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  href="#media"
+                 title="Відео">
+                  Відео
+                </a>
+              </li>
+              <li>
+                <a
+                  class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  href="#contacts"
+                 title="Контакти">
+                  Контакти
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      tabindex="-1"
+      class="mx-auto max-w-site px-4 md:px-6 lg:px-8"
+    >
+      <section
+        id="home"
+        aria-labelledby="home-title"
+        class="relative isolate my-8 overflow-hidden rounded-lg bg-ink px-5 py-12 md:my-16 md:px-10 md:py-20 lg:min-h-hero lg:px-12"
+      >
+        <img
+          class="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+          src="assets/images/hero.webp"
+          alt=""
+          aria-hidden="true"
+          width="1365"
+          height="768"
+          fetchpriority="high"
+        />
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/85 to-ink/75 md:to-ink/40"></div>
+        <div class="min-w-0 max-w-2xl">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-muted">
+            Українська ігрова спільнота
+          </p>
+          <h1
+            id="home-title"
+            class="mb-4 max-w-2xl text-3xl font-bold leading-tight lg:text-hero"
+          >
+            Форум, Wiki та LFG в одній ігровій екосистемі.
+          </h1>
+          <p class="max-w-xl text-paper md:text-lg">
+            Знаходь напарників, ділися досвідом і тримай корисні матеріали під рукою.
+          </p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              id="hero-cta"
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#lfg"
+             title="Знайти напарника →">
+              Знайти напарника
+              <span aria-hidden="true">→</span>
+            </a>
+            <a
+              class="inline-flex min-h-11 items-center rounded bg-ink/80 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary justify-center border border-border px-6 py-3"
+              href="#wiki"
+             title="Відкрити Wiki">
+              Відкрити Wiki
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="features" aria-labelledby="features-title" class="my-12 md:my-16">
+        <h2
+          id="features-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Три способи бути ближче до гри
+        </h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 transition-shadow hover:shadow-glow"
+          >
+            <img
+              class="brand-icon mb-4 h-10 w-12 object-contain"
+              src="assets/icons/forum-icon.svg"
+              alt=""
+              width="64"
+              height="40"
+              loading="lazy"
+            />
+            <h3 class="mb-2 text-xl font-bold">Форум</h3>
+            <p class="text-muted">
+              Обговорюй ігри та обмінюйся досвідом українською. Спільні теми допомагають
+              знаходити людей зі схожими інтересами.
+            </p>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 transition-shadow hover:shadow-glow"
+          >
+            <img
+              class="brand-icon mb-4 h-10 w-12 object-contain"
+              src="assets/icons/wiki-icon.svg"
+              alt=""
+              width="64"
+              height="40"
+              loading="lazy"
+            />
+            <h3 class="mb-2 text-xl font-bold">Wiki</h3>
+            <p class="text-muted">
+              Тримай поради й корисні матеріали під рукою. Збирай знання про улюблені
+              ігри в одному місці.
+            </p>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 transition-shadow hover:shadow-glow"
+          >
+            <img
+              class="brand-icon mb-4 h-10 w-12 object-contain"
+              src="assets/icons/lfg-icon.svg"
+              alt=""
+              width="64"
+              height="40"
+              loading="lazy"
+            />
+            <h3 class="mb-2 text-xl font-bold">Пошук напарників</h3>
+            <p class="text-muted">
+              Обирай гру, платформу та формат сесії. Знаходь лобі, що відповідає твоїм
+              планам.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="lfg" aria-labelledby="lfg-title" class="my-12 md:my-16">
+        <h2
+          id="lfg-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Знайди команду для своєї гри
+        </h2>
+        <p class="mb-6 max-w-3xl text-muted">
+          Обери формат серед прикладів лобі. Це навчальний інтерфейс: реєстрація та
+          реальні заявки ще не підключені.
+        </p>
+        <div
+          id="lobby-grid"
+          class="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 01
+            </p>
+            <h3 class="text-xl font-bold">CS2 · вечірній матч</h3>
+            <p>Потрібні 2 гравці · PC · мікрофон</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 01"
+             title="Умови приєднання до демо-лобі 01">
+              Умови приєднання
+            </a>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 02
+            </p>
+            <h3 class="text-xl font-bold">Dota 2 · рейтинг</h3>
+            <p>Потрібен 1 гравець · PC · командна гра</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 02"
+             title="Умови приєднання до демо-лобі 02">
+              Умови приєднання
+            </a>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 03
+            </p>
+            <h3 class="text-xl font-bold">Minecraft · виживання</h3>
+            <p>Потрібні 3 гравці · PC · спільний світ</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 03"
+             title="Умови приєднання до демо-лобі 03">
+              Умови приєднання
+            </a>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 04
+            </p>
+            <h3 class="text-xl font-bold">Valorant · тренування</h3>
+            <p>Потрібні 2 гравці · будь-який ранг · мікрофон</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 04"
+             title="Умови приєднання до демо-лобі 04">
+              Умови приєднання
+            </a>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 05
+            </p>
+            <h3 class="text-xl font-bold">Minecraft · будівництво</h3>
+            <p>Потрібні 2 гравці · PC · творчий режим</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 05"
+             title="Умови приєднання до демо-лобі 05">
+              Умови приєднання
+            </a>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6 flex flex-col gap-3 transition-shadow hover:shadow-glow"
+          >
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">
+              Демо-лобі 06
+            </p>
+            <h3 class="text-xl font-bold">Apex Legends · кооператив</h3>
+            <p>Потрібні 2 гравці · консоль · командна гра</p>
+            <p class="mt-auto text-sm text-muted">Навчальна картка · неактивне лобі</p>
+            <a
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+              href="#join"
+              aria-label="Умови приєднання до демо-лобі 06"
+             title="Умови приєднання до демо-лобі 06">
+              Умови приєднання
+            </a>
+          </article>
+        </div>
+      </section>
+      <section id="wiki" aria-labelledby="wiki-title" class="my-12 md:my-16">
+        <h2
+          id="wiki-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Знання спільноти
+        </h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6"
+          >
+            <h3 class="mb-2 text-xl font-bold">Командна комунікація</h3>
+            <p class="text-muted">
+              До початку матчу домовтеся про голосовий канал і ролі. Коротко
+              повідомляйте про позиції та плани, поважайте інших гравців.
+            </p>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6"
+          >
+            <h3 class="mb-2 text-xl font-bold">Вибір кооперативної гри</h3>
+            <p class="text-muted">
+              Звірте платформи, кількість учасників і бажаний режим. Домовтеся про
+              тривалість сесії, щоб усім було зручно грати разом.
+            </p>
+          </article>
+          <article
+            class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6"
+          >
+            <h3 class="mb-2 text-xl font-bold">Спільний світ Minecraft</h3>
+            <p class="text-muted">
+              Узгодьте версію гри, правила сервера та місце старту. Розподіліть перші
+              завдання й регулярно зберігайте резервну копію світу.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        id="about"
+        aria-labelledby="about-title"
+        class="my-12 grid gap-6 md:my-16 lg:grid-cols-2"
+      >
+        <div>
+          <h2
+            id="about-title"
+            class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+          >
+            Про Gaming Hub
+          </h2>
+          <p class="mb-4 text-muted">
+            Gaming Hub поєднує форум, Wiki та пошук напарників. Проєкт створюється для
+            українськомовних гравців, яким потрібні зрозумілі домовленості та спільний
+            простір для досвіду.
+          </p>
+          <h3 id="planner" class="mb-3 text-xl font-bold">Як спланувати сесію</h3>
+          <ol class="list-decimal space-y-2 pl-6">
+            <li>Обери гру, платформу та режим.</li>
+            <li>Узгодь час і тривалість з напарниками.</li>
+            <li>Перевір голосовий зв’язок перед стартом.</li>
+          </ol>
+        </div>
+        <aside
+          id="community-rules"
+          class="min-w-0 rounded-lg border border-border bg-surface p-4 shadow-card md:p-6"
+          aria-labelledby="rules-title"
+        >
+          <h3 id="rules-title" class="mb-3 text-xl font-bold">Правила спільноти</h3>
+          <ul class="list-disc space-y-2 pl-5 text-muted">
+            <li>Будь ввічливим до інших гравців.</li>
+            <li>Вказуй актуальну гру та режим.</li>
+            <li>Поважай домовленості команди.</li>
+          </ul>
+        </aside>
+      </section>
+      <section id="media" aria-labelledby="media-title" class="my-12 md:my-16">
+        <h2
+          id="media-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Ігри, що об’єднують
+        </h2>
+        <p class="mb-6 text-muted">
+          Counter-Strike 2 — офіційний трейлер Valve. Познайомся з однією з ігор, для
+          яких у Gaming Hub передбачено пошук команди.
+        </p>
+        <!-- Медіаінтеграція YouTube: 16:9, адаптивна ширина, title та lazy. -->
+        <iframe
+          id="video-frame"
+          class="aspect-video w-full rounded-lg border-0 shadow-card"
+          src="https://www.youtube-nocookie.com/embed/nSE38xjMLqE"
+          title="Counter-Strike 2 — офіційний трейлер Valve"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+        <p class="mt-3">
+          <a
+            class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            href="https://www.youtube.com/watch?v=nSE38xjMLqE"
+            target="_blank"
+            rel="noopener noreferrer"
+           title="Переглянути трейлер на YouTube ↗">
+            Переглянути трейлер на YouTube ↗
+          </a>
+        </p>
+      </section>
+      <section id="contacts" aria-labelledby="contacts-title" class="my-12 md:my-16">
+        <h2
+          id="contacts-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Спільнота у Львові
+        </h2>
+        <p class="mb-6 max-w-3xl text-muted">
+          Площа Ринок — умовне місце для офлайн-зустрічі в навчальному проєкті. Дату та
+          місце реальної зустрічі потрібно узгоджувати окремо.
+        </p>
+        <div class="grid min-w-0 gap-6 lg:grid-cols-2">
+          <div class="min-w-0">
+            <h3 class="mb-3 text-xl font-bold">Орієнтир на карті</h3>
+            <!-- Медіаінтеграція Google Maps: зарезервована висота без зсуву макета. -->
+            <iframe
+              id="map-frame"
+              class="h-80 w-full rounded-lg border-0 shadow-card md:h-96"
+              src="https://maps.google.com/maps?q=Rynok%20Square%20Lviv&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              title="Google Maps — площа Ринок у Львові, умовне місце зустрічі"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+            <a
+              class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary mt-3"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Rynok+Square+Lviv"
+              target="_blank"
+              rel="noopener noreferrer"
+             title="Відкрити Google Maps ↗">
+              Відкрити Google Maps ↗
+            </a>
+          </div>
+          <aside class="min-w-0" aria-labelledby="weather-title">
+            <h3 id="weather-title" class="mb-3 text-xl font-bold">
+              Погода перед зустріччю
+            </h3>
+            <!-- Сторонній динамічний віджет Windy: актуальна погодна карта. -->
+            <iframe
+              id="weather-frame"
+              class="h-80 w-full rounded-lg border-0 shadow-card md:h-96"
+              src="https://embed.windy.com/embed2.html?lat=49.84&amp;lon=24.03&amp;zoom=6&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;detailLat=49.84&amp;detailLon=24.03&amp;location=coordinates&amp;type=map&amp;metricWind=km%2Fh&amp;metricTemp=%C2%B0C"
+              title="Windy — інтерактивний прогноз вітру для Львова"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <a
+              class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary mt-3"
+              href="https://www.windy.com/49.840/24.030"
+              target="_blank"
+              rel="noopener noreferrer"
+             title="Перевірити прогноз на Windy ↗">
+              Перевірити прогноз на Windy ↗
+            </a>
+          </aside>
+        </div>
+      </section>
+      <section
+        id="join"
+        aria-labelledby="join-title"
+        class="my-12 rounded-lg border border-primary bg-surface p-4 md:my-16 md:p-8"
+      >
+        <h2
+          id="join-title"
+          class="mb-4 text-2xl font-bold leading-tight lg:text-heading"
+        >
+          Почни зі своєї гри
+        </h2>
+        <p class="mb-6 max-w-3xl text-muted">
+          Переглянь приклади лобі та обери відповідний формат. У цій версії можна
+          дослідити інтерфейс; для реального приєднання надалі потрібні обліковий запис
+          і серверна частина.
+        </p>
+        <a
+          class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-primaryHover hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary active:bg-primaryActive sm:w-auto"
+          href="#lfg"
+         title="Переглянути лобі">
+          Переглянути лобі
+        </a>
+        <details class="mt-6">
+          <summary
+            class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary cursor-pointer"
+          >
+            Що доступно зараз?
+          </summary>
+          <p class="mt-3 max-w-3xl text-muted">
+            Працюють навігація, мобільне меню, довідкові матеріали, відео, карта й
+            погодний віджет. Лобі демонстраційні, персональні дані не збираються.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="border-t border-border bg-surface">
+      <div
+        id="footer-grid"
+        class="mx-auto grid max-w-site grid-cols-1 gap-8 px-4 py-10 md:grid-cols-2 md:px-6 lg:grid-cols-4 lg:px-8"
+      >
+        <div>
+          <p class="text-lg font-bold">Gaming Hub</p>
+          <p class="mt-3 text-muted">
+            Форум, Wiki та LFG в українській ігровій спільноті.
+          </p>
+        </div>
+        <nav aria-label="Навігація в підвалі">
+          <h2 class="mb-3 text-lg font-bold">Спільнота</h2>
+          <ul class="grid">
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#features"
+               title="Можливості">
+                Можливості
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#lfg"
+               title="LFG">
+                LFG
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#media"
+               title="Відео">
+                Відео
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#contacts"
+               title="Контакти">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav aria-label="Корисні посилання">
+          <h2 class="mb-3 text-lg font-bold">Корисне</h2>
+          <ul class="grid">
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#about"
+               title="Про нас">
+                Про нас
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#community-rules"
+               title="Правила">
+                Правила
+              </a>
+            </li>
+            <li>
+              <a
+                class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="#wiki"
+               title="Wiki">
+                Wiki
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="mb-3 text-lg font-bold">Навчальний проєкт</h2>
+          <p class="text-sm text-muted">© 2026 Gaming Hub. Демонстраційні лобі.</p>
+          <a
+            class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary mt-3"
+            href="#top"
+           title="На початок ↑">
+            На початок ↑
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
