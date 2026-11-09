@@ -1,9 +1,11 @@
 {
-  "name": "gaming-hub-lab7",
-  "version": "1.0.0",
+  "name": "gaming-hub",
+  "version": "1.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "tailwindcss -c tailwind.config.cjs -i css/input.css -o css/tailwind.css --minify"
+    "build": "tailwindcss -c tailwind.config.cjs -i css/input.css -o css/tailwind.css --minify",
+    "test": "node --test tests/validation.test.mjs"
   },
   "devDependencies": {
     "lighthouse": "^13.6.0",

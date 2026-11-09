@@ -1,6 +1,6 @@
 /** Lab 7: existing Gaming Hub design tokens and the landing page entry point. */
 module.exports = {
-  content: ["./index.html"],
+  content: ["./index.html", "./js/**/*.{js,mjs}"],
   theme: {
     extend: {
       colors: {
