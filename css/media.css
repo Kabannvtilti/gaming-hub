@@ -15,7 +15,7 @@
 .review-rating{color:#00ffcc;letter-spacing:.12em;margin-bottom:1rem}
 .review-card blockquote{flex:1;margin:0 0 1.5rem;font-size:1rem}
 .review-author{display:flex;align-items:center;gap:.85rem}
-.review-author img{width:48px;height:48px;object-fit:contain;padding:.4rem;background:#0b1018;border-radius:50%}
+.review-author img{width:48px;height:48px;object-fit:contain;padding:.4rem;background:transparent;border-radius:50%}
 .review-author h3{font-weight:700}.review-author p{font-size:.8rem;color:#aab7c8}
 .review-controls{display:flex;align-items:center;justify-content:center;gap:1rem;min-height:60px;margin-top:.5rem}
 .reviews-swiper:not(.swiper-initialized) .review-controls{display:none}
