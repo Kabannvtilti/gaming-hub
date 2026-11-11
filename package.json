@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tailwindcss -c tailwind.config.cjs -i css/input.css -o css/tailwind.css --minify",
-    "test": "node --test tests/validation.test.mjs"
+    "test": "node --test tests/*.mjs"
   },
   "devDependencies": {
     "lighthouse": "^13.6.0",

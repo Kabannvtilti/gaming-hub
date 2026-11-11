@@ -11,7 +11,10 @@
     <meta name="theme-color" content="#0B1018" />
     <title>Gaming Hub — форум, Wiki та пошук напарників</title>
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/tailwind.css?v=lab9-feedback" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/tailwind.css?v=lab10-media" />
+    <link rel="stylesheet" href="css/media.css?v=lab10-media" />
     <script src="js/navigation.js" defer></script>
     <script src="js/validation.js" type="module"></script>
   </head>
@@ -61,10 +64,8 @@
             <li>
               <a
                 class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                href="#media"
-               title="Відео">
-                Відео
-              </a>
+                href="#community-media"
+               title="Медіа">Медіа</a>
             </li>
             <li>
               <a
@@ -120,10 +121,8 @@
               <li>
                 <a
                   class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  href="#media"
-                 title="Відео">
-                  Відео
-                </a>
+                  href="#community-media"
+                 title="Медіа">Медіа</a>
               </li>
               <li>
                 <a
@@ -176,6 +175,7 @@
           >
             Форум, Wiki та LFG в одній ігровій екосистемі.
           </h1>
+<p class="hero-tagline"><span class="sr-only">Знаходь команду. Ділися досвідом. Грай українською.</span><span id="typed-text" aria-hidden="true">Знаходь команду.</span></p>
           <p class="max-w-xl text-paper md:text-lg">
             Знаходь напарників, ділися досвідом і тримай корисні матеріали під рукою.
           </p>
@@ -451,6 +451,51 @@
           </ul>
         </aside>
       </section>
+      <section id="community-media" class="border-t border-border py-12 md:py-16" aria-labelledby="community-media-title">
+ <div class="mx-auto max-w-site px-4 md:px-6 lg:px-8">
+  <div class="media-heading"><div><p class="media-eyebrow">Знайомство зі спільнотою</p><h2 id="community-media-title" class="text-heading font-bold">Грати краще разом</h2><p id="reviews-note" class="media-note">Приклади відгуків для навчального інтерфейсу. Імена та тексти вигадані.</p></div><button id="motion-toggle" class="media-button" type="button" aria-pressed="false" disabled>Зупинити анімацію</button></div>
+  <div class="swiper reviews-swiper" aria-label="Демонстраційні відгуки" aria-describedby="reviews-note">
+   <div class="swiper-wrapper"><article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Зручно обговорювати тактику українською й знаходити відповіді в одному місці.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/forum-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Олена</h3><p>Форум · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Картки лобі допомагають швидко звірити гру, платформу та плани на вечір.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/lfg-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Максим</h3><p>Пошук команди · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Короткі поради перед сесією легко переглянути навіть з телефона.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/wiki-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Ірина</h3><p>Wiki · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Подобається ідея домовлятися про ролі ще до початку спільної гри.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/lfg-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Андрій</h3><p>Кооператив · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Є простір для запитань новачків і спокійного обміну власним досвідом.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/forum-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Софія</h3><p>Спільнота · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Хочу зберігати перевірені інструкції та повертатися до них перед грою.»</p></blockquote>
+ <div class="review-author"><img src="assets/icons/wiki-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Данило</h3><p>Корисні матеріали · демо</p></div></div>
+</article></div>
+   <div class="review-controls"><button class="swiper-button-prev" type="button" aria-label="Попередній відгук"></button><div class="swiper-pagination"></div><button class="swiper-button-next" type="button" aria-label="Наступний відгук"></button></div>
+  </div>
+  <p id="media-status" role="status" class="media-note" hidden></p>
+  <div class="gallery-heading"><p class="media-eyebrow">Графіка проєкту</p><h2 id="gallery-title" class="text-heading font-bold">Візуальний світ Gaming Hub</h2><p id="gallery-description" class="media-note">Відкрий зображення, перегортай альбом стрілками або свайпом та роздивляйся деталі зі збільшенням.</p></div>
+  <div class="media-gallery" aria-labelledby="gallery-title" aria-describedby="gallery-description"><a class="gallery-card rounded-lg border border-border bg-surface" href="assets/images/hero.webp" data-fancybox="gaming-gallery" data-caption="Атмосфера Gaming Hub" aria-label="Відкрити Атмосфера Gaming Hub"><span class="gallery-art gallery-art--wide"><img src="assets/images/hero.webp" alt="Ілюстрація ігрового простору з неоновими акцентами" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Атмосфера Gaming Hub<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="assets/icons/forum-icon.svg" data-fancybox="gaming-gallery" data-caption="Форум" aria-label="Відкрити Форум"><span class="gallery-art gallery-art--icon"><img src="assets/icons/forum-icon.svg" alt="Графічний знак форуму Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Форум<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="assets/icons/wiki-icon.svg" data-fancybox="gaming-gallery" data-caption="Wiki" aria-label="Відкрити Wiki"><span class="gallery-art gallery-art--icon"><img src="assets/icons/wiki-icon.svg" alt="Графічний знак Wiki Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Wiki<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="assets/icons/lfg-icon.svg" data-fancybox="gaming-gallery" data-caption="Пошук напарників" aria-label="Відкрити Пошук напарників"><span class="gallery-art gallery-art--icon"><img src="assets/icons/lfg-icon.svg" alt="Графічний знак пошуку напарників Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Пошук напарників<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="assets/images/logo.svg" data-fancybox="gaming-gallery" data-caption="Логотип Gaming Hub" aria-label="Відкрити Логотип Gaming Hub"><span class="gallery-art gallery-art--icon"><img src="assets/images/logo.svg" alt="Логотип ігрової спільноти Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Логотип Gaming Hub<span aria-hidden="true"> ↗</span></span></a></div>
+ </div>
+</section>
       <section id="media" aria-labelledby="media-title" class="my-12 md:my-16">
         <h2
           id="media-title"
@@ -678,10 +723,8 @@
             <li>
               <a
                 class="inline-flex min-h-11 items-center rounded px-2 text-sm font-semibold transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                href="#media"
-               title="Відео">
-                Відео
-              </a>
+                href="#community-media"
+               title="Медіа">Медіа</a>
             </li>
             <li>
               <a
@@ -742,5 +785,9 @@
         </div>
       </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+<script src="js/media.js"></script>
   </body>
 </html>

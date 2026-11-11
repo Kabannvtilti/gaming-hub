@@ -1,0 +1,166 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gaming Hub Lab 10 Prototype</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" /><style>
+*{box-sizing:border-box}body{margin:0;background:#0b1018;color:#f5f7fa;font:16px/1.6 Arial,sans-serif}button{font:inherit}h1,h2,h3,p{margin:0;overflow-wrap:anywhere}h1{font-size:32px}h2{font-size:28px}h3{font-size:18px}main{max-width:1200px;margin:auto;padding:32px 24px}section{margin-top:32px}.review-card{border:1px solid #73839a;border-radius:8px;background:#151e2b;padding:24px}.brand-icon{filter:brightness(0) saturate(100%) invert(80%) sepia(77%) saturate(1352%) hue-rotate(106deg)}.gallery-card{border:1px solid #73839a;border-radius:8px;background:#151e2b}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+/* Lab 10: styles stay scoped to the media components. */
+.hero-tagline{min-height:2.7em;margin-top:1rem;color:#00ffcc;font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:700}
+.media-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;margin-bottom:1.5rem}
+.media-eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#00ffcc;font-weight:700;margin-bottom:.5rem}
+.media-note{color:#aab7c8;font-size:.9rem;margin-top:.75rem;max-width:65ch}
+.media-button{min-height:44px;padding:.65rem 1rem;border:1px solid #73839a;border-radius:.5rem;flex-shrink:0;font-size:.9rem;color:#f5f7fa;background:#151e2b;cursor:pointer}
+.media-button:disabled{opacity:.5;cursor:wait}
+.media-button:hover{border-color:#00ffcc}
+.media-button:focus-visible,.gallery-card:focus-visible{outline:3px solid #00ffcc;outline-offset:4px}
+.reviews-swiper{--swiper-theme-color:#00ffcc;--swiper-navigation-size:18px;overflow:hidden;min-width:0}
+.reviews-swiper:not(.swiper-initialized) .swiper-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:24px}
+.reviews-swiper .swiper-wrapper{align-items:stretch}
+.reviews-swiper .swiper-slide{height:auto;box-sizing:border-box;min-width:0}
+.review-card{display:flex;flex-direction:column;min-height:255px}
+.review-rating{color:#00ffcc;letter-spacing:.12em;margin-bottom:1rem}
+.review-card blockquote{flex:1;margin:0 0 1.5rem;font-size:1rem}
+.review-author{display:flex;align-items:center;gap:.85rem}
+.review-author img{width:48px;height:48px;object-fit:contain;padding:.4rem;background:#0b1018;border-radius:50%}
+.review-author h3{font-weight:700}.review-author p{font-size:.8rem;color:#aab7c8}
+.review-controls{display:flex;align-items:center;justify-content:center;gap:1rem;min-height:60px;margin-top:.5rem}
+.reviews-swiper:not(.swiper-initialized) .review-controls{display:none}
+.review-controls .swiper-button-prev,.review-controls .swiper-button-next{position:static;margin:0;width:44px;height:44px;border:1px solid #73839a;border-radius:50%;flex:none}
+.review-controls .swiper-pagination{position:static;width:auto;min-width:130px;line-height:1;padding:10px 0}
+.review-controls .swiper-pagination-bullet{background:#aab7c8;opacity:.65;width:10px;height:10px;margin:6px!important}
+.review-controls .swiper-pagination-bullet-active{background:#00ffcc;opacity:1}
+.review-controls button:focus-visible,.swiper-pagination-bullet:focus-visible{outline:2px solid #00ffcc;outline-offset:3px}
+.gallery-heading{margin-top:3.5rem;margin-bottom:1.5rem}
+.media-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.gallery-card{display:block;overflow:hidden;min-width:0;color:#f5f7fa;text-decoration:none;transition:border-color .2s}
+.gallery-card:hover{border-color:#00ffcc}.gallery-art{display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;background:radial-gradient(circle at 50% 60%,#253047,#0b1018)}
+.gallery-art img{display:block;width:100%;height:100%;object-fit:cover}.gallery-art--icon img{width:46%;height:64%;object-fit:contain}
+.gallery-caption{display:block;padding:1rem;font-size:.95rem;font-weight:700}.gallery-caption span{color:#00ffcc}
+.fancybox__container{--fancybox-bg:rgba(6,10,16,.96)}
+@media(max-width:767px){.media-heading{flex-direction:column}.media-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-card:first-child{grid-column:1/-1}}
+@media(max-width:379px){.media-gallery{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.typed-cursor{display:none}.gallery-card{transition:none}}
+</style></head><body><main><h1>Gaming Hub</h1><p class="hero-tagline"><span class="sr-only">Знаходь команду. Ділися досвідом. Грай українською.</span><span id="typed-text" aria-hidden="true">Знаходь команду.</span></p><section id="community-media" class="border-t border-border py-12 md:py-16" aria-labelledby="community-media-title">
+ <div class="mx-auto max-w-site px-4 md:px-6 lg:px-8">
+  <div class="media-heading"><div><p class="media-eyebrow">Знайомство зі спільнотою</p><h2 id="community-media-title" class="text-heading font-bold">Грати краще разом</h2><p id="reviews-note" class="media-note">Приклади відгуків для навчального інтерфейсу. Імена та тексти вигадані.</p></div><button id="motion-toggle" class="media-button" type="button" aria-pressed="false" disabled>Зупинити анімацію</button></div>
+  <div class="swiper reviews-swiper" aria-label="Демонстраційні відгуки" aria-describedby="reviews-note">
+   <div class="swiper-wrapper"><article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Зручно обговорювати тактику українською й знаходити відповіді в одному місці.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/forum-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Олена</h3><p>Форум · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Картки лобі допомагають швидко звірити гру, платформу та плани на вечір.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/lfg-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Максим</h3><p>Пошук команди · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Короткі поради перед сесією легко переглянути навіть з телефона.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/wiki-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Ірина</h3><p>Wiki · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Подобається ідея домовлятися про ролі ще до початку спільної гри.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/lfg-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Андрій</h3><p>Кооператив · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Є простір для запитань новачків і спокійного обміну власним досвідом.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/forum-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Софія</h3><p>Спільнота · демо</p></div></div>
+</article>
+<article class="swiper-slide review-card rounded-lg border border-border bg-surface p-6">
+ <p class="review-rating" aria-label="Оцінка 5 із 5">★★★★★</p>
+ <blockquote><p>«Хочу зберігати перевірені інструкції та повертатися до них перед грою.»</p></blockquote>
+ <div class="review-author"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/wiki-icon.svg" width="48" height="48" alt="" loading="lazy" class="brand-icon" /><div><h3>Данило</h3><p>Корисні матеріали · демо</p></div></div>
+</article></div>
+   <div class="review-controls"><button class="swiper-button-prev" type="button" aria-label="Попередній відгук"></button><div class="swiper-pagination"></div><button class="swiper-button-next" type="button" aria-label="Наступний відгук"></button></div>
+  </div>
+  <p id="media-status" role="status" class="media-note" hidden></p>
+  <div class="gallery-heading"><p class="media-eyebrow">Графіка проєкту</p><h2 id="gallery-title" class="text-heading font-bold">Візуальний світ Gaming Hub</h2><p id="gallery-description" class="media-note">Відкрий зображення, перегортай альбом стрілками або свайпом та роздивляйся деталі зі збільшенням.</p></div>
+  <div class="media-gallery" aria-labelledby="gallery-title" aria-describedby="gallery-description"><a class="gallery-card rounded-lg border border-border bg-surface" href="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/images/hero.webp" data-fancybox="gaming-gallery" data-caption="Атмосфера Gaming Hub" aria-label="Відкрити Атмосфера Gaming Hub"><span class="gallery-art gallery-art--wide"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/images/hero.webp" alt="Ілюстрація ігрового простору з неоновими акцентами" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Атмосфера Gaming Hub<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/forum-icon.svg" data-fancybox="gaming-gallery" data-caption="Форум" aria-label="Відкрити Форум"><span class="gallery-art gallery-art--icon"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/forum-icon.svg" alt="Графічний знак форуму Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Форум<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/wiki-icon.svg" data-fancybox="gaming-gallery" data-caption="Wiki" aria-label="Відкрити Wiki"><span class="gallery-art gallery-art--icon"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/wiki-icon.svg" alt="Графічний знак Wiki Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Wiki<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/lfg-icon.svg" data-fancybox="gaming-gallery" data-caption="Пошук напарників" aria-label="Відкрити Пошук напарників"><span class="gallery-art gallery-art--icon"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/icons/lfg-icon.svg" alt="Графічний знак пошуку напарників Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Пошук напарників<span aria-hidden="true"> ↗</span></span></a>
+<a class="gallery-card rounded-lg border border-border bg-surface" href="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/images/logo.svg" data-fancybox="gaming-gallery" data-caption="Логотип Gaming Hub" aria-label="Відкрити Логотип Gaming Hub"><span class="gallery-art gallery-art--icon"><img src="https://raw.githubusercontent.com/Kabannvtilti/gaming-hub/main/assets/images/logo.svg" alt="Логотип ігрової спільноти Gaming Hub" loading="lazy" width="640" height="400" /></span><span class="gallery-caption">Логотип Gaming Hub<span aria-hidden="true"> ↗</span></span></a></div>
+ </div>
+</section></main><script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script>document.addEventListener("DOMContentLoaded", () => {
+  const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const toggle = document.getElementById("motion-toggle");
+  const sliderElement = document.querySelector(".reviews-swiper");
+  const status = document.getElementById("media-status");
+  let swiper = null;
+  let typed = null;
+  let manuallyPaused = false;
+  let pointerInside = false;
+  let focusInside = false;
+  const unavailable = [];
+
+  if (typeof Swiper === "function" && sliderElement) {
+    swiper = new Swiper(sliderElement, {
+      loop: true, slidesPerView: 1, spaceBetween: 24, speed: 500,
+      autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+      pagination: { el: sliderElement.querySelector(".swiper-pagination"), clickable: true },
+      navigation: { nextEl: sliderElement.querySelector(".swiper-button-next"), prevEl: sliderElement.querySelector(".swiper-button-prev") },
+      breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+      keyboard: { enabled: true, onlyInViewport: true },
+      a11y: { enabled: true, prevSlideMessage: "Попередній відгук", nextSlideMessage: "Наступний відгук", firstSlideMessage: "Перший відгук", lastSlideMessage: "Останній відгук", paginationBulletMessage: "Перейти до відгуку {{index}}", slideLabelMessage: "{{index}} з {{slidesLength}}" },
+    });
+  } else unavailable.push("слайдер");
+
+  if (typeof Fancybox !== "undefined") {
+    Fancybox.bind('[data-fancybox="gaming-gallery"]', {
+      Carousel: { transition: "fade", infinite: true },
+      Images: { zoom: true, Panzoom: { maxScale: 3 } },
+      Thumbs: { autoStart: false },
+      Toolbar: { display: { left: ["infobar"], middle: [], right: ["zoomIn", "zoomOut", "toggle1to1", "close"] } },
+      l10n: { CLOSE: "Закрити", NEXT: "Наступне зображення", PREV: "Попереднє зображення", MODAL: "Галерея зображень", ZOOMIN: "Збільшити", ZOOMOUT: "Зменшити", TOGGLEZOOM: "Масштаб 1 до 1" },
+      on: { init: () => { if (swiper) swiper.autoplay.stop(); }, destroy: () => updateMotion() },
+    });
+  } else unavailable.push("галерея");
+
+  function createTyped() {
+    if (typed || typeof Typed !== "function" || motion.matches) return;
+    typed = new Typed("#typed-text", {
+      strings: ["Знаходь команду.", "Ділися досвідом.", "Грай українською."],
+      typeSpeed: 50, backSpeed: 30, backDelay: 1800, loop: true,
+      contentType: "null", showCursor: true,
+    });
+  }
+  if (typeof Typed !== "function") unavailable.push("ефект друку");
+  createTyped();
+
+  function updateMotion() {
+    const paused = manuallyPaused || motion.matches || document.hidden;
+    const galleryOpen = typeof Fancybox !== "undefined" && Boolean(Fancybox.getInstance());
+    if (swiper) {
+      swiper.params.speed = motion.matches ? 0 : 500;
+      if (paused || pointerInside || focusInside || galleryOpen) swiper.autoplay.stop();
+      else if (!swiper.autoplay.running) swiper.autoplay.start();
+    }
+    if (motion.matches && typed) {
+      typed.destroy(); typed = null;
+      document.getElementById("typed-text").textContent = "Знаходь команду.";
+    } else if (!motion.matches) {
+      createTyped();
+      if (typed) { if (paused || galleryOpen) typed.stop(); else typed.start(); }
+    }
+    if (toggle) {
+      toggle.disabled = !(swiper || typed) || motion.matches;
+      toggle.setAttribute("aria-pressed", String(manuallyPaused || motion.matches));
+      toggle.textContent = motion.matches ? "Анімацію вимкнено системою" : manuallyPaused ? "Відновити анімацію" : "Зупинити анімацію";
+    }
+  }
+  toggle?.addEventListener("click", () => { manuallyPaused = !manuallyPaused; updateMotion(); });
+  sliderElement?.addEventListener("mouseenter", () => { pointerInside = true; updateMotion(); });
+  sliderElement?.addEventListener("mouseleave", () => { pointerInside = false; updateMotion(); });
+  sliderElement?.addEventListener("focusin", () => { focusInside = true; updateMotion(); });
+  sliderElement?.addEventListener("focusout", () => { queueMicrotask(() => { focusInside = sliderElement.contains(document.activeElement); updateMotion(); }); });
+  document.addEventListener("visibilitychange", updateMotion);
+  motion.addEventListener("change", updateMotion);
+  updateMotion();
+  if (unavailable.length && status) {
+    status.hidden = false;
+    status.textContent = `Не завантажилися: ${unavailable.join(", ")}. Відгуки доступні як картки, зображення — за посиланнями.`;
+  }
+});
+</script></body></html>
