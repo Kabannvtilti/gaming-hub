@@ -73,6 +73,10 @@ node --test tests/validation.test.mjs
 
 Прототип: https://stackblitz.com/edit/stackblitz-starters-fmbsjx5p?file=index.html
 
+Публічна версія ЛР10: https://gaming-hub-snowy.vercel.app/#community-media
+
+Для цієї роботи Production у Vercel відстежує `feat/lab10-media`. Усі push ЛР10 виконуються в цю гілку; `main` залишається версією попередньої роботи.
+
 Кнопка зупиняє анімації, системне налаштування reduced motion вимикає автоматичний рух. Якщо CDN не завантажиться, доступні звичайні картки та посилання на зображення. Відгуки та імена вигадані.
 
 `npm test` виконує 60 тестів власної логіки. Код ініціалізації: `js/media.js`; локальні стилі: `css/media.css`; опис і промпт-паспорт: `docs/Lab10_design.md`, `docs/Lab10_prompt_log.md`.
