@@ -1,15 +1,12 @@
 // Чисті правила можна перевіряти окремо від DOM і браузера.
 export const REGEX_EMAIL = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const REGEX_PHONE = /^\+380\d{9}$/;
-const NAME_CHARACTERS = /^[\p{L}\p{M}][\p{L}\p{M} '\u2019\u02bc-]*$/u;
 const length = (value) => Array.from(value).length;
 
 export function validateName(value) {
   const name = value.trim().normalize("NFC");
   if (length(name) < 2) return "Введіть ім’я щонайменше з 2 символів.";
   if (length(name) > 80) return "Ім’я має містити не більше 80 символів.";
-  if (!NAME_CHARACTERS.test(name) || (name.match(/\p{L}/gu) || []).length < 2)
-    return "Використовуйте літери, пробіли, апостроф або дефіс.";
   return "";
 }
 
