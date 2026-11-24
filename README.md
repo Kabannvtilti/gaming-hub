@@ -75,15 +75,19 @@ node --test tests/validation.test.mjs
 
 Публічна версія ЛР10: https://gaming-hub-snowy.vercel.app/#community-media
 
-Для цієї роботи Production у Vercel відстежує `feat/lab10-media`. Усі push ЛР10 виконуються в цю гілку; `main` залишається версією попередньої роботи.
+Історична версія ЛР10 збережена в гілці `feat/lab10-media`. Медіакомпоненти також увійшли до `main` у складі ЛР11.
 
 Кнопка зупиняє анімації, системне налаштування reduced motion вимикає автоматичний рух. Якщо CDN не завантажиться, доступні звичайні картки та посилання на зображення. Відгуки та імена вигадані.
 
-`npm test` виконує 60 тестів власної логіки. Код ініціалізації: `js/media.js`; локальні стилі: `css/media.css`; опис і промпт-паспорт: `docs/Lab10_design.md`, `docs/Lab10_prompt_log.md`.
+Код ініціалізації — `js/media.js`. Локальні стилі — `css/media.css`. Опис і промпт-паспорт містяться в `docs/Lab10_design.md` і `docs/Lab10_prompt_log.md`.
+
+## Калькулятор ігрової сесії ЛР11
+
+Секція `#session-budget` обчислює орієнтовну вартість сесії за тривалістю, тарифом і вибором гарнітури. Тарифи демонстраційні. Правила й промпт-паспорт містяться в `docs/Lab11_design.md`. Команда `pnpm test` запускає 76 тестів, включно з перевірками калькулятора в `tests/widget.test.mjs`.
 
 ## Vercel
 
-Імпортувати репозиторій як Framework Other, корінь `./`. `vercel.json` задає порожню команду збірки й публікацію готових статичних файлів. Для ЛР10 Production відстежує `feat/lab10-media`; налаштування `main` стосувалося попередньої роботи.
+Імпортувати репозиторій як Framework Other, корінь `./`. `vercel.json` задає порожню команду збірки й публікацію готових статичних файлів. Production відстежує гілку `main`.
 
 Звіт у Google Docs: https://docs.google.com/document/d/1QheCIvstdJgYfrPbp5djRsyEsALGuld68xBnC6EIA4M/edit
 
@@ -92,5 +96,5 @@ node --test tests/validation.test.mjs
 - Репозиторій: https://github.com/Kabannvtilti/gaming-hub
 - GitHub Pages: https://kabannvtilti.github.io/gaming-hub/
 - Netlify: https://gaming-hub-lab6-kapushchak.netlify.app/
-- Vercel (ЛР9): https://gaming-hub-snowy.vercel.app/#feedback
+- Vercel (ЛР11): https://gaming-hub-snowy.vercel.app/#session-budget
 
