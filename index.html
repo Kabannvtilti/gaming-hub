@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/media.css?v=lab10-media" />
     <script src="js/navigation.js" defer></script>
     <script src="js/validation.js" type="module"></script>
+    <script src="js/widget.js" type="module"></script>
   </head>
   <body id="top" class="min-w-0 bg-ink font-sans text-base leading-relaxed text-paper">
     <a
@@ -375,6 +376,48 @@
               Умови приєднання
             </a>
           </article>
+        </div>
+      </section>
+      <section id="session-budget" aria-labelledby="session-budget-title" data-session-calculator
+        class="my-12 rounded-lg border border-border bg-surface p-4 shadow-card md:my-16 md:p-8">
+        <h2 id="session-budget-title" class="mb-2 text-2xl font-bold leading-tight lg:text-heading">
+          Калькулятор ігрової сесії
+        </h2>
+        <p class="mb-6 max-w-3xl text-muted">
+          Оціни бюджет однієї ігрової станції. Тарифи демонстраційні.
+        </p>
+        <div class="grid min-w-0 gap-6 md:grid-cols-2">
+          <form data-session-form class="min-w-0 space-y-4">
+            <div>
+              <label for="session-hours" class="mb-1 block font-semibold">Тривалість, год</label>
+              <input id="session-hours" data-hours type="number" inputmode="numeric" value="2"
+                min="1" max="12" step="1" required aria-describedby="session-hours-hint session-hours-error"
+                class="min-h-12 w-full rounded-lg border border-border bg-ink px-3 text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+              <p id="session-hours-hint" class="mt-1 text-sm text-muted">Від 1 до 12 цілих годин.</p>
+              <p id="session-hours-error" data-hours-error class="mt-1 text-sm font-semibold text-rose-300" hidden></p>
+            </div>
+            <div>
+              <label for="session-plan" class="mb-1 block font-semibold">Ігрова станція</label>
+              <select id="session-plan" data-plan required aria-describedby="session-plan-error"
+                class="min-h-12 w-full rounded-lg border border-border bg-ink px-3 text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+                <option value="standard">Стандартний ПК · 80 грн/год</option>
+                <option value="performance">Потужний ПК · 120 грн/год</option>
+                <option value="console">Консоль · 150 грн/год</option>
+              </select>
+              <p id="session-plan-error" data-plan-error class="mt-1 text-sm font-semibold text-rose-300" hidden></p>
+            </div>
+            <label for="session-headset" class="flex min-h-12 cursor-pointer items-center gap-3">
+              <input id="session-headset" data-headset type="checkbox"
+                class="h-5 w-5 accent-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+              <span>Гарнітура · +50 грн за сесію</span>
+            </label>
+          </form>
+          <div class="min-w-0 self-start rounded-lg border border-border bg-ink p-4 md:p-6">
+            <label for="session-total" class="block font-semibold">Орієнтовна вартість</label>
+            <output id="session-total" for="session-hours session-plan session-headset" data-total
+              aria-live="polite" aria-atomic="true" class="mt-2 block break-words text-3xl font-bold text-primary">—</output>
+            <p data-session-status class="mt-2 text-sm text-muted" aria-live="polite" hidden></p>
+          </div>
         </div>
       </section>
       <section id="wiki" aria-labelledby="wiki-title" class="my-12 md:my-16">
